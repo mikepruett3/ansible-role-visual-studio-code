@@ -23,12 +23,6 @@
     mode: 'u=rw,go=r'
     force: true
 
-- name: Add key to keyring (apt)
-  become: true
-  ansible.builtin.apt_key:
-    file: '/etc/apt/keyrings/microsoft.asc'
-    state: present
-
 - name: Install VS Code repo (apt)
   become: true
   ansible.builtin.apt_repository:
