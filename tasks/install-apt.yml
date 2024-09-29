@@ -19,7 +19,7 @@
   become: true
   ansible.builtin.get_url:
     url: '{{ visual_studio_code_mirror }}/keys/microsoft.asc'
-    dest: '/etc/apt/keyrings/'
+    dest: '/etc/apt/trusted.gpg.d/'
     mode: 'u=rw,go=r'
     force: true
 
