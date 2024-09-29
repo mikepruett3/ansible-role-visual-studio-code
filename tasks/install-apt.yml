@@ -29,7 +29,7 @@
     repo: >-
       deb [arch={{ visual_studio_code_deb_architecture }}
       {{ visual_studio_code_gpgcheck | ternary("", " trusted=true") }}
-      signed-by=/etc/apt/keyrings/microsoft.asc]
+      signed-by=/etc/apt/trusted.gpg.d/microsoft.asc]
       {{ visual_studio_code_mirror }}/repos/code stable main
     filename: vscode
     state: present
